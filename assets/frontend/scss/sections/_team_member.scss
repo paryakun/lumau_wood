@@ -1,0 +1,56 @@
+/*-----------------------
+    Team member area
+------------------------*/
+.team-member-area{
+    padding: 113px 0 120px 0;
+    .single-team-member{
+        .thumb{
+            position: relative;
+            overflow: hidden;
+            &:hover{
+                .hover{
+                    visibility: visible;
+                    opacity: .85;
+                    bottom: 0;
+                }
+            }
+            .hover{
+                position: absolute;
+                left: 0;
+                bottom: -100px;
+                width: 100%;
+                @include gradient-left-right($left,$right);
+                opacity: .85;
+                padding: 27px 30px 15px 30px;
+                @include transition($transition);
+                visibility: hidden;
+                opacity: 0;
+                .content{
+                    h6{
+                        font-size: 18px;
+                        text-transform: uppercase;
+                        color: $white;
+                        margin-top: 0;
+                    }
+                    .post{
+                        font-size: 14px;
+                        color: $white;
+                    }
+                }
+                .social{
+                    margin-top: 8px;
+                    li{
+                        display: inline-block;
+                        padding: 10px;
+                        &:first-child{
+                            padding-left: 0;
+                        }
+                        a{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

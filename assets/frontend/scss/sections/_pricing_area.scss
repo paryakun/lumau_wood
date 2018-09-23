@@ -1,0 +1,118 @@
+/*-------------------------
+    Pricing Plan Area
+--------------------------*/
+.pricing-area{
+    padding: 120px 0;
+    position: relative;
+    z-index: 0;
+    .single-pricing-plan{
+        border: 2px solid #f0f0f0;
+        position: relative;
+        padding: 33px 40px 38px 40px;
+        background-color: $white;
+        z-index: 1;
+         &.pricing-bg{
+            background-image: url(../img/bg/pricing-plan-bg.jpg);
+            background-position: center;
+            background-size: cover;
+         }
+         &:after{
+             position: absolute;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 100%;
+             z-index: -1;
+             content: '';
+             background-color: $white;
+         }
+         &:hover{
+            &:after{
+                @include gradient-left-right($left,$right);
+                opacity: .90;
+            }
+             .header {
+                 .name{
+                     color: $white;
+                 }
+                 .price{
+                    h3{
+                        @include text-gradient($white, $white);
+                    }
+                    span{
+                         @include text-gradient($white, $white);
+                    }
+                 }
+             }
+             .body {
+                 ul {
+                     li {
+                            color: $white;
+                        }
+                    }
+                }
+                .footer {
+                    .boxed-btn {
+                        @include gradient-left-right(rgba(0, 0, 0, .0), rgba(0, 0, 0, .0));
+                        background: transparent;
+                        border: 2px solid rgba(255,255,255,.20);
+                        padding: 13px 38px;
+                    }
+                }
+         }
+         .header{
+             border-bottom: 1px solid #f3f3f3;
+             padding-bottom: 33px;
+             margin-bottom: 27px;
+             .name{
+                 font-size: 18px;
+                 font-weight: 400;
+                 display: block;
+             }
+             .price{
+                 position: relative;
+                 display: inline-block;
+                 h3 {
+                     font-size: 35px;
+                     text-transform: uppercase;
+                     margin-top: 8px;
+                     @include text-gradient($left, $right);
+                     margin-bottom: 0;
+                     @include transition($transition);
+                 }
+                 .icon {
+                     font-size: 20px;
+                     font-weight: 900;
+                      @include text-gradient($left, $right);
+                      position: absolute;
+                      top: 5px;
+                      right: -10px;
+                       @include transition($transition);
+                 }
+             }
+         }
+         .body{
+             ul{
+                 li{
+                     padding: 12px 0;
+                     font-size: 14px;
+                      @include transition($transition);
+                     i{
+                         padding-right: 5px;
+                     }
+                     &:first-child{
+                         padding-top:0; 
+                     }
+                 }
+             }
+         }
+         .footer{
+             margin-top: 35px;
+             .boxed-btn{
+                 font-size: 14px;
+                 font-weight: 700;
+                 @include gradient-left-right($left,$right);
+             }
+         }
+    }
+}

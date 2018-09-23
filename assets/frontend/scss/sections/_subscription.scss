@@ -1,0 +1,50 @@
+/*------------------
+    Subscription 
+-------------------*/
+.subscribe-area {
+    padding: 110px 0 110px 0;
+    background-color: #f5f5f5;
+
+    h3{
+        font-size: 40px;
+        text-transform: uppercase;
+        line-height: 50px;
+        margin-top: 0;
+        span{
+            font-weight: 400;
+            display: block;
+        }
+    }
+    .subscription-form{
+        padding-top: 27px;
+        p{
+            position: relative;
+            input[type=text]{
+                border-radius: 5px;
+                padding: 20px 30px;
+                color: #555555;
+                &:focus{
+                    border-width: 2px;
+                }
+            }
+            button[type=submit]{
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                width: 30%;
+                padding: 18.5px 30px;
+                margin: 0;
+                border-radius: 5px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                @include gradient-left-right($left,$right);
+                @include gradient-left-right($left,$right);
+                font-size: 14px;
+                font-weight: 700;
+                i{
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}

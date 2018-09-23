@@ -1,0 +1,86 @@
+/*------------------------
+	Css Indexing
+--------------------------
+--------------------------
+** @typography
+--------------------------
+** Global Scss
+--------------------------
+** Preloader
+--------------------------
+** Normalize
+--------------------------
+** Navbar Area
+--------------------------
+** Header Area
+--------------------------
+** About Us Area
+--------------------------
+** Featrue Area
+--------------------------
+** Introduce Area
+--------------------------
+** Counter Area
+--------------------------
+** Suitable Area
+--------------------------
+** Screenshort Area
+--------------------------
+** Subscription 
+--------------------------
+** Team member area
+--------------------------
+** Clients Review Area
+--------------------------
+** Pricing Plan Area
+--------------------------
+** Faq area
+--------------------------
+** Get in touch
+--------------------------
+** Footer Area
+--------------------------
+
+*/
+$bootstrap-sass-asset-helper: false !default;
+
+//== Template Main Color
+$base-color: #3880f4;
+$secondary-color: #303443;
+$section-bg-color:#f6f6f6;
+$white: #fff;
+//== heading color
+$heading-color: #222222;
+$descr-color: #555555;
+//== gradient color
+$left: #ff008a;
+$right: #8700d4;
+/*-----------------
+    @Typography
+-----------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:300,400,500,600,700,900');
+
+$body-font:'Open Sans',sans-serif;
+$heading-font:'Poppins',sans-serif;
+
+$base-font-size:          14px !default;
+$font-size-h1:            62px !default; 
+$font-size-h2:            50px !default; 
+$font-size-h3:            40px !default;  
+$font-size-h4:            22px !default;   
+//** Unit-less `line-height` for use in components like buttons.
+$line-height:        1.6 !default; // 24/15
+
+
+
+// border-radius
+$border-radius-base:        5px !default;
+$border-radius-large:       25px !default;
+$border-radius-small:       3px !default;
+$border-radius-circle:      50% !default;
+
+
+//  transition
+$transition: all .5s ease-in;
+$transition-long: all .9s ease-in;
+

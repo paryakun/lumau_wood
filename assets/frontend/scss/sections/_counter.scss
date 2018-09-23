@@ -1,0 +1,29 @@
+/*------------------------------
+    Counter Area
+------------------------------*/
+.counter-area{
+    padding: 120px 0;
+    .single-counter-box{
+        position: relative;
+        .icon{
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 50px;
+            @include text-gradient ($left, $right);
+        }
+        .content{
+            padding-left: 85px;
+            .counter-text{
+                font-size: 30px;
+                font-weight: 700;
+                font-family: $heading-font;
+            }
+            h6{
+                font-size: 16px;
+                font-weight: 400;
+                font-family: $body-font;
+            }
+        }
+    }
+}

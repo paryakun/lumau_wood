@@ -1,0 +1,52 @@
+/*------------------------------
+    Introduce Area
+------------------------------*/
+.introduce-with-area{
+    padding-top:120px;
+    padding-bottom: 110px; 
+    position: relative;
+    z-index: 0;
+    &.introduce-bg{
+        background-color: #ddd;
+        background-image: url(../img/bg/introduce-bg.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    &:after{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        @include gradient-left-right($left,$right);
+        opacity: .90;
+        z-index: -1;
+    }
+    h3{
+        font-size: 40px;
+        text-transform: uppercase;
+        color: $white;
+        margin-top: 35px;
+        margin-bottom: 0;
+        span{
+            font-weight: 400;
+            display: block;
+        }
+    }
+    .video-play-btn{
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 20px;
+        text-align: center;
+        border: 2px solid rgba(255,255,255,.30);
+        color: $white;
+        @include transition($transition);
+        border-radius: 50%;
+        &:hover{
+           @include gradient-left-right($left,$right); //background-color: $white;
+        }
+    }
+}

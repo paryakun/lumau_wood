@@ -1,0 +1,79 @@
+/*-----------------------
+    Faq area
+-----------------------*/
+.faq-area{
+    padding: 113px 0 100px 0;
+    background-color: #f8f8f8;
+    .faq-accordion {
+        padding-top: 50px;
+        .panel-title {
+            font-size: 14px;
+            font-weight: 400;
+            color: #303443;
+        }
+        .panel {
+            box-shadow: none;
+            margin-bottom: 17px;
+            border: none
+        }
+        .panel-default>.panel-heading {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            a {
+                display: block;
+                background-color: #f8f8f8;
+                position: relative;
+                padding-left: 70px;
+                &:after {
+                    position: absolute;
+                    left: 40px;
+                    content: '\f067';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #ddd;
+                    text-align: center;
+                    line-height: 20px;
+                    font-size: 10px;
+                    color: $white;
+                    @include gradient-left-right($left, $right);
+                }
+                padding-bottom: 5px;
+                &:first-child{
+                    padding-top: 5px;
+                }
+            }
+            a[aria-expanded="true"] {
+                border-bottom: none;
+                background-color: $white;
+                padding: 40px 50px 17px 40px;
+                padding-left: 70px;
+                &:after {
+                    position: absolute;
+                    left: 40px;
+                    content: '\f068';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    color: $white;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #ddd;
+                    text-align: center;
+                    line-height: 20px;
+                    font-size: 10px;  
+                    @include gradient-left-right($left,$right);
+                }
+            }
+        }
+        .panel-group .panel-heading+.panel-collapse>.panel-body {
+            border: none;
+        }
+        .panel-body {
+            padding: 8px 40px 37px 40px;
+        }
+    }
+}

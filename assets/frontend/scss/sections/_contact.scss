@@ -1,0 +1,49 @@
+/*---------------------
+    Get in touch
+----------------------*/
+.get-in-touch-area{
+    padding:  113px 0 120px 0;
+    .get-in-touch-form-wrapper {
+        border: 2px solid #eee;
+        padding: 23px 40px 37px 40px;
+        .left-content{
+            .single-get-in-touch-box{
+                position: relative;
+                margin-bottom: 32px;
+                .icon{
+                    font-size: 30px;
+                    position: absolute;
+                    left: 0;
+                    i{
+                        @include text-gradient($left, $right);
+                    }
+                }
+                .content{
+                    padding-left: 62px;
+                }
+            }
+        }
+        .contact-form{
+            input,textarea{
+                border: none;
+                padding-left: 0;
+                font-size: 14px;
+                border-bottom: 2px solid #eee;
+                margin-bottom: 15px;
+            }
+            input[type=submit]{
+                margin-bottom: 0;
+                margin-top: 16px;
+                display: inline-block;
+                width: auto;
+                padding: 15px 35px;
+                @include gradient-left-right($left,$right);
+                font-size: 14px;
+                font-weight: 700;
+                &:hover{
+                     @include gradient-left-right( $right, $left);
+                }
+            }
+        }
+    }
+}

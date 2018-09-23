@@ -1,0 +1,146 @@
+/*------------------------------
+    About Us Area
+------------------------------*/
+.about-us-area{
+    padding: 120px 0; 
+    .content{
+        padding:125px 0; 
+        h2{
+            text-transform: uppercase;
+            font-size: 50px;
+            font-weight: 700;
+            @include text-gradient(#ff008a, #8700d4);
+            margin-bottom: 5px;
+        }
+        .sub-title{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: block;
+            color: #222222;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            color: #333333;
+        }
+        ul{
+            padding-top: 15px;
+            li {
+                display: block;
+                color: #333333;
+                line-height: 16px;
+                position: relative;
+                padding: 10px 0;
+                padding-left: 25px;
+                &:after{
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 6px;
+                    height: 4px;
+                    border-radius: 2px;
+                    background-color: #c8c8c8;
+                    content: '';
+                    @include translateY(-50%);
+                }
+                &:first-child{
+                    padding-top: 0;
+                    &:after{
+                        top:10px;
+                    }
+                }
+            }
+        }
+        .boxed-btn {
+            &.blank{
+                margin-top: 30px;
+                border: 2px solid transparent;
+                border-radius: 25px;
+                 border: solid 2px transparent;
+                 border-radius: 25px;
+                 padding: 0;
+                 width: 200px;
+                 height: 50px;
+                 text-align: center;
+                 line-height: 45px;
+                 font-size: 14px;
+                 text-transform: uppercase;
+                 font-weight: 700;
+                 @include gradient-border-with-radius($left,$right);
+                 @include transition($transition);
+                 &:hover{
+                        @include gradient-left-right($left,$right);
+                        color: $white;
+                 }
+            }
+        }
+    }
+    .about-us-right-image{
+        padding-left: 100px;
+    }
+}
+.about-app-area{
+    background-color: $section-bg-color;
+    padding: 100px 0;
+    .single-about-app-box{
+        position: relative;
+        padding: 25px 30px 25px 30px ;
+        @include transition($transition);
+        &:hover{
+            @include gradient-left-right(rgb(255, 0, 138), rgb(135, 0, 212));
+            .icon {
+                svg {
+                    stop {
+                        &:first-child {
+                            stop-color: $white;;
+                        }
+                        &:last-child {
+                            stop-color: $white;
+                        }
+                    }
+                }
+            }
+             .content {
+                 h4 {
+                     color: $white;
+                     span {
+                          color: $white;
+                     }
+                 }
+             }
+        }
+        .icon{
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            @include translateY(-50%);
+            @include transition($transition);
+            svg{
+                stop{
+                    &:first-child{
+                        stop-color:rgb(255,0,138);
+                         @include transition($transition);
+                    }
+                    &:last-child{
+                        stop-color:rgb(135,0,212);
+                         @include transition($transition);
+                    }
+                }
+            }
+        }
+        .content{
+            padding-left: 50px;
+            h4{
+                font-size: 20px;
+                text-transform: uppercase;
+                margin-top: 0;
+                margin-bottom: 0;
+                 @include transition($transition);
+                span{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

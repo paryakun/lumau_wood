@@ -1,0 +1,80 @@
+/*------------------------------
+    Featrue Area
+------------------------------*/
+.feature-area{
+    padding-top:115px;
+    padding-bottom: 120px; 
+    .featured-right-item{
+        @extend .featured-left-item;
+         .single-featured-box {
+             .icon{
+                 right: auto;
+                 left: 0;
+             }
+             .content {
+                 padding-right: 0px !important;
+                 padding-left: 90px;
+                 text-align: left !important;
+                 p{
+                     margin-bottom: 0;
+                 }
+             }
+         }
+    }
+    .featured-left-item{
+        .single-featured-box{
+            position: relative;
+            @include transition($transition);
+            margin-bottom: 70px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &:hover{
+                .icon{
+                    .icon-inner{
+                        left: 9px;
+                        top: 9px;
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+            .icon{
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: 1px solid #ddd;
+                position: relative;
+                position: absolute;
+                right: 0;
+                top: 0;
+                .icon-inner{
+                    position: absolute;
+                    left: 4px;
+                    top: 4px;
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 50px;
+                    color: $white;
+                    @include gradient-left-right($left,$right);
+                    position: relative;
+                    @include transition($transition);
+                    svg{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        @include translate(-50%,-50%);
+                    }
+                }
+            }
+            .content{
+                padding-right: 90px;
+                text-align: right;
+            }
+        }
+    }
+}
